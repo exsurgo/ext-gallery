@@ -26,8 +26,24 @@ Ext.application({
         'GalleryItems'
     ],
     views: [
-        'Gallery'
+        'Gallery',
+        'MainView'
     ],
     autoCreateViewport: true,
-    name: 'MyApp'
+    name: 'MyApp',
+
+    launch: function() {
+        
+        var gallery = Ext.create('MyApp.view.Gallery', {
+            title:  'Select Template'
+        });
+        
+        gallery.show();
+        
+        gallery.load({
+            url: '/sencha/gallery/templates.json'
+        });
+        
+    }
+
 });

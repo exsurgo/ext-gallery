@@ -3,3 +3,5 @@
 .gallery-item img { width: 185px; height: 150px; display: block; margin: 0 auto 0 auto; }
 .gallery-item .item-title { font-weight: bold; font-size: 1em; text-align: center; }
 .gallery-item .item-description { padding: 3px 0 3px 0; text-align: center; }
+.gallery .x-menu-item-link { padding-left: 10px; }
+.gallery .x-menu-item-icon { display: none; }

@@ -14,68 +14,91 @@
  */
 
 Ext.define('MyApp.view.Gallery', {
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.window.Window',
     alias: 'widget.gallery',
 
+    cls: 'gallery',
     height: 350,
-    itemId: 'itemViewer',
+    itemId: 'gallery',
     width: 600,
     layout: {
-        type: 'fit'
+        type: 'border'
     },
 
     initComponent: function() {
         var me = this;
 
         Ext.applyIf(me, {
-            dockedItems: [
-                {
-                    xtype: 'menu',
-                    dock: 'left',
-                    floating: false,
-                    itemId: 'categoryMenu',
-                    width: 120,
-                    plain: true,
-                    items: [
-                        {
-                            xtype: 'menuitem',
-                            text: 'Basic'
-                        },
-                        {
-                            xtype: 'menuitem',
-                            text: 'Layouts'
-                        },
-                        {
-                            xtype: 'menuitem',
-                            text: 'Starter Apps'
-                        }
-                    ]
-                }
+            bodyCls: [
+                'x-window-body-default',
+                'x-border-layout-ct',
+                'x-closable',
+                'x-window-body-closable',
+                'x-window-body-default-closable'
             ],
             items: [
                 {
-                    xtype: 'dataview',
-                    itemId: 'items',
-                    padding: 10,
-                    autoScroll: true,
-                    emptyText: 'No items found',
-                    itemSelector: 'div.gallery-item',
-                    itemTpl: [
-                        '<tpl for=".">',
-                        '    <div class="gallery-item">',
-                        '		<img src="DefaultPreview.jpg" />',
-                        '		<div class="item-title">{title}</div>',
-                        '		<div class="item-description">{description}</div>',
-                        '    </div>',
-                        '</tpl>'
-                    ],
-                    store: 'GalleryItems',
-                    listeners: {
-                        itemclick: {
-                            fn: me.onItemsItemClick,
-                            scope: me
+                    xtype: 'panel',
+                    region: 'west',
+                    itemId: 'menuPanel',
+                    width: 120,
+                    layout: {
+                        type: 'fit'
+                    },
+                    items: [
+                        {
+                            xtype: 'menu',
+                            floating: false,
+                            itemId: 'menu',
+                            width: 120,
+                            plain: true,
+                            items: [
+                                {
+                                    xtype: 'menuitem',
+                                    text: 'Basic'
+                                },
+                                {
+                                    xtype: 'menuitem',
+                                    text: 'Layouts'
+                                },
+                                {
+                                    xtype: 'menuitem',
+                                    text: 'Starter Apps'
+                                }
+                            ]
                         }
-                    }
+                    ]
+                },
+                {
+                    xtype: 'panel',
+                    region: 'center',
+                    itemId: 'itemPanel',
+                    autoScroll: true,
+                    items: [
+                        {
+                            xtype: 'dataview',
+                            itemId: 'items',
+                            padding: 10,
+                            emptyText: 'No items found',
+                            itemSelector: 'div.gallery-item',
+                            itemTpl: [
+                                '<tpl for=".">',
+                                '    <div class="gallery-item">',
+                                '		<img src="DefaultPreview.jpg" />',
+                                '		<div class="item-title">{title}</div>',
+                                '		<div class="item-description">{description}</div>',
+                                '    </div>',
+                                '</tpl>'
+                            ],
+                            store: 'GalleryItems',
+                            listeners: {
+                                itemclick: {
+                                    fn: me.onItemsItemClick,
+                                    scope: me
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         });
@@ -88,6 +111,11 @@ Ext.define('MyApp.view.Gallery', {
             gallery = dataview.up('gallery');
         
         gallery.onSelect(selected);
+    },
+
+    load: function(params) {
+        var gallery = this;
+        
     },
 
     onSelect: function(item) {

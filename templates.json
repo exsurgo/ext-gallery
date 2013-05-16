@@ -1,17 +1,22 @@
  [
      {
-         "title": "Master/Detail",
+         "name": "MasterDetail",
+		 "title": "Master/Detail",
          "description": "Master grid view with detail panel",
-		 "category": "Ext"
+		 "category": "Basic",
+		 "framework": "Ext"
      },
      {
+		 "name": "LoginRegister",
          "title": "Login/Register",
          "description": "Login and register forms",
-		 "category": "Ext"
+		 "category": "Basic",
+		 "framework": "Ext"
      },
      {
-         "title": "Navigation",
+         "name": "Navigation",
          "description": "Navigation menu with interchanging content panels and URL history",
-		 "category": "Ext"
+		 "category": "Basic",
+		 "framework": "Ext"
      }
  ]

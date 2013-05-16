@@ -17,8 +17,7 @@
             "paths": [
                 "metadata/view/Gallery",
                 "app/view/override/Gallery.js",
-                "app/view/Gallery.js",
-                "app/view/Viewport.js"
+                "app/view/Gallery.js"
             ],
             "className": "Gallery"
         },
@@ -43,10 +42,20 @@
                 "app/model/GalleryItem.js"
             ],
             "className": "GalleryItem"
+        },
+        "738c8707-5594-40be-b7cb-792f6f6888af": {
+            "paths": [
+                "metadata/view/MainView",
+                "app/view/override/MainView.js",
+                "app/view/MainView.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MainView"
         }
     },
     "viewOrderMap": {
         "view": [
+            "738c8707-5594-40be-b7cb-792f6f6888af",
             "ba9af5e5-c364-4eac-8de3-b95b31d8c38e"
         ],
         "store": [

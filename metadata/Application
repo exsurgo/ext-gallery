@@ -13,10 +13,38 @@
             "GalleryItems"
         ],
         "views": [
-            "Gallery"
+            "Gallery",
+            "MainView"
         ],
         "autoCreateViewport": true,
         "name": "MyApp"
     },
-    "designerId": "application"
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "\r",
+                    "var gallery = Ext.create('MyApp.view.Gallery', {\r",
+                    "    title:  'Select Template'\r",
+                    "});\r",
+                    "\r",
+                    "gallery.show();\r",
+                    "\r",
+                    "gallery.load({\r",
+                    "    url: '/sencha/gallery/templates.json'\r",
+                    "});\r",
+                    ""
+                ]
+            },
+            "designerId": "b03e4859-7bac-4acc-91f6-197bcba15bcd"
+        }
+    ]
 }

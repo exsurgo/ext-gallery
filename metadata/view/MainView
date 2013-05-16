@@ -1,0 +1,26 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainView",
+        "designer|userAlias": "mainview",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "designerId": "738c8707-5594-40be-b7cb-792f6f6888af",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "36f6327e-4cde-439e-9377-d99bb7e13d09"
+        }
+    ]
+}
