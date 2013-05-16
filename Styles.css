@@ -1,0 +1,5 @@
+.gallery-item { border: 1px solid #ccc; padding: 5px; width: 48.5%; margin: 0 5px 5px 0; float: left; border-radius: 5px; }
+.gallery-item:hover { cursor: pointer; border: 1px solid #36BCFF; }
+.gallery-item img { width: 185px; height: 150px; display: block; margin: 0 auto 0 auto; }
+.gallery-item .item-title { font-weight: bold; font-size: 1em; text-align: center; }
+.gallery-item .item-description { padding: 3px 0 3px 0; text-align: center; }

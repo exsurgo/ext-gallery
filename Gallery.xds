@@ -1,0 +1,67 @@
+{
+    "name": "Gallery",
+    "settings": {},
+    "xdsVersion": "2.3.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "f5b34ccf-6d82-40f1-ac5e-65273563c57a": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "ba9af5e5-c364-4eac-8de3-b95b31d8c38e": {
+            "paths": [
+                "metadata/view/Gallery",
+                "app/view/override/Gallery.js",
+                "app/view/Gallery.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "Gallery"
+        },
+        "2dd74dea-c92a-4097-9cea-3dae68d4e74c": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "d7fe083d-0f38-4360-ab15-00628828e427": {
+            "paths": [
+                "metadata/store/GalleryItems",
+                "app/store/override/GalleryItems.js",
+                "app/store/GalleryItems.js"
+            ],
+            "className": "GalleryItems"
+        },
+        "e8acecb4-f469-4146-81c3-5847cf4ec0df": {
+            "paths": [
+                "metadata/model/GalleryItem",
+                "app/model/override/GalleryItem.js",
+                "app/model/GalleryItem.js"
+            ],
+            "className": "GalleryItem"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "ba9af5e5-c364-4eac-8de3-b95b31d8c38e"
+        ],
+        "store": [
+            "d7fe083d-0f38-4360-ab15-00628828e427"
+        ],
+        "controller": [],
+        "model": [
+            "e8acecb4-f469-4146-81c3-5847cf4ec0df"
+        ],
+        "resource": [
+            "f5b34ccf-6d82-40f1-ac5e-65273563c57a",
+            "2dd74dea-c92a-4097-9cea-3dae68d4e74c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

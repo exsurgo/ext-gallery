@@ -1,0 +1,17 @@
+ [
+     {
+         "title": "Master/Detail",
+         "description": "Master grid view with detail panel",
+		 "category": "Ext"
+     },
+     {
+         "title": "Login/Register",
+         "description": "Login and register forms",
+		 "category": "Ext"
+     },
+     {
+         "title": "Navigation",
+         "description": "Navigation menu with interchanging content panels and URL history",
+		 "category": "Ext"
+     }
+ ]

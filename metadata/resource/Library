@@ -1,0 +1,13 @@
+{
+    "type": "libraryresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Library",
+        "basePath": "http://cdn.sencha.com/ext/gpl/4.2.0/"
+    },
+    "designerId": "f5b34ccf-6d82-40f1-ac5e-65273563c57a"
+}

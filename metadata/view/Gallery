@@ -1,0 +1,155 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 350,
+        "itemId": "itemViewer",
+        "width": 600,
+        "designer|userClassName": "Gallery",
+        "designer|userAlias": "gallery",
+        "designer|initialView": true,
+        "layout": "fit",
+        "title": null
+    },
+    "designerId": "ba9af5e5-c364-4eac-8de3-b95b31d8c38e",
+    "cn": [
+        {
+            "type": "Ext.menu.Menu",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "left",
+                "floating": false,
+                "itemId": "categoryMenu",
+                "width": 120,
+                "plain": true
+            },
+            "designerId": "a5497a11-31d6-4bf5-abe5-1a7fb472bb01",
+            "cn": [
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Basic"
+                    },
+                    "designerId": "c882b0b9-0c08-429c-a10b-7bfc3b9477f6"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Layouts"
+                    },
+                    "designerId": "08b83807-c5ec-4af9-b3da-7eab6df71f7a"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Starter Apps"
+                    },
+                    "designerId": "32c02ded-5182-4728-8e41-57d986c89232"
+                }
+            ]
+        },
+        {
+            "type": "Ext.view.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": null,
+                "itemId": "items",
+                "padding": 10,
+                "autoScroll": true,
+                "emptyText": "No items found",
+                "itemCls": null,
+                "itemSelector": "div.gallery-item",
+                "store": "GalleryItems"
+            },
+            "designerId": "ed123956-8dcd-46b6-b219-fca7cbd35f09",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<tpl for=\".\">\r",
+                            "    <div class=\"gallery-item\">\r",
+                            "\t\t<img src=\"DefaultPreview.jpg\" />\r",
+                            "\t\t<div class=\"item-title\">{title}</div>\r",
+                            "\t\t<div class=\"item-description\">{description}</div>\r",
+                            "    </div>\r",
+                            "</tpl>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "b1418acf-93e5-48c7-aa0b-afc8ab24eea0"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onItemsItemClick",
+                        "implHandler": [
+                            "var selected = record.data,\r",
+                            "    gallery = dataview.up('gallery');\r",
+                            "\r",
+                            "gallery.onSelect(selected);"
+                        ],
+                        "name": "itemclick",
+                        "scope": "me"
+                    },
+                    "designerId": "4edbcfd3-765d-402a-9e52-b503aa1631d4"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSelect",
+                "designer|params": [
+                    "item"
+                ],
+                "implHandler": [
+                    "Ext.Msg.alert(item.title);"
+                ]
+            },
+            "designerId": "82fd01de-54c7-4e57-b274-e9aac53c301e"
+        }
+    ]
+}

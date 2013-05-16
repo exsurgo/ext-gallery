@@ -1,0 +1,30 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "GalleryItem",
+        "storeId": "GalleryItems",
+        "designer|userClassName": "GalleryItems",
+        "data": null
+    },
+    "designerId": "d7fe083d-0f38-4360-ab15-00628828e427",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/sencha/gallery/templates.json"
+            },
+            "designerId": "ecfcb90f-4678-43fd-92be-10a5feaccfb9"
+        }
+    ]
+}
