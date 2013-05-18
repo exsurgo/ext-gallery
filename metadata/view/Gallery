@@ -186,8 +186,14 @@
                     "params"
                 ],
                 "implHandler": [
-                    "var gallery = this;\r",
-                    ""
+                    "var gallery = this,\r",
+                    "    dataView = gallery.down('dataview'),\r",
+                    "    store = dataView.store;\r",
+                    "\r",
+                    "// Set URL\r",
+                    "store.proxy.url = params.url;\r",
+                    "\r",
+                    "store.load();"
                 ]
             },
             "designerId": "003bb7ce-5611-4030-9ee8-856398a8fb33"

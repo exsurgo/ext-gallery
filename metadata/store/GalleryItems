@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": true,
+        "autoLoad": false,
         "model": "GalleryItem",
         "storeId": "GalleryItems",
         "designer|userClassName": "GalleryItems",
@@ -22,7 +22,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "/sencha/gallery/templates.json"
+                "url": null
             },
             "designerId": "ecfcb90f-4678-43fd-92be-10a5feaccfb9"
         }

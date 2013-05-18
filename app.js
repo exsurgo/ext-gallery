@@ -38,11 +38,11 @@ Ext.application({
             title:  'Select Template'
         });
         
-        gallery.show();
-        
         gallery.load({
             url: '/sencha/gallery/templates.json'
         });
+        
+        gallery.show();
         
     }
 

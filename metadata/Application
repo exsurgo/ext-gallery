@@ -36,11 +36,11 @@
                     "    title:  'Select Template'\r",
                     "});\r",
                     "\r",
-                    "gallery.show();\r",
-                    "\r",
                     "gallery.load({\r",
                     "    url: '/sencha/gallery/templates.json'\r",
                     "});\r",
+                    "\r",
+                    "gallery.show();\r",
                     ""
                 ]
             },

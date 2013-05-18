@@ -114,8 +114,14 @@ Ext.define('MyApp.view.Gallery', {
     },
 
     load: function(params) {
-        var gallery = this;
+        var gallery = this,
+            dataView = gallery.down('dataview'),
+            store = dataView.store;
         
+        // Set URL
+        store.proxy.url = params.url;
+        
+        store.load();
     },
 
     onSelect: function(item) {

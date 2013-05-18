@@ -24,12 +24,11 @@ Ext.define('MyApp.store.GalleryItems', {
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({
-            autoLoad: true,
+            autoLoad: false,
             model: 'MyApp.model.GalleryItem',
             storeId: 'GalleryItems',
             proxy: {
-                type: 'ajax',
-                url: '/sencha/gallery/templates.json'
+                type: 'ajax'
             }
         }, cfg)]);
     }
